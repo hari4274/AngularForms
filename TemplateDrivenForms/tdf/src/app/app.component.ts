@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'tdf';
   topics = ['Angular', 'React', 'Vue'];
   topicHasError = true;
+  submitted = false;
 
   userModel = new User('Rob', 'a@gmail.com', 9666641233, 'default', 'morning', true);
   
@@ -25,6 +26,7 @@ export class AppComponent {
   }
 
   onSubmit() {
+    this.submitted = true;
     this._enrollmentService.enroll(this.userModel)
       .subscribe(
         data => console.log("Success", data),
