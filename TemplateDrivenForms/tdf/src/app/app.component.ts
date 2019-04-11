@@ -11,7 +11,7 @@ export class AppComponent {
   topics = ['Angular', 'React', 'Vue'];
   topicHasError = true;
 
-  userModel = new User('', 'a@gmail.com', 9666641233, 'default', 'morning', true);
+  userModel = new User('Rob', 'a@gmail.com', 9666641233, 'default', 'morning', true);
   
   validateTopic(value) {
     if (value === 'default') {
