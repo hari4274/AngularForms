@@ -9,6 +9,10 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class AppComponent {
   title = 'reactive-forms';
 
+  get userName() {
+    return this.registrationForm.get('userName');
+  }
+
   constructor (private fb: FormBuilder) {}
 
     registrationForm = this.fb.group({
